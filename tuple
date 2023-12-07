@@ -1,0 +1,10 @@
+Tuple
+
+let skill:[string,number]
+skill=['abc',5]
+
+let color:[number,number,number]=[255,0,0]
+
+let bgcolor,headclr:[number,number,number,number?]
+bgcolor = [0, 255, 255, 0.5];
+headclr = [0, 255, 255];

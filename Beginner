@@ -1,0 +1,264 @@
+let message: string = 'Hello, World!';
+console.log(message);
+
+output
+Hello,World
+
+____________________________________________________________________________________________________________________________________________________________________________________
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript: Hello, World!</title>
+</head>
+<body>
+    <script src="app.js"></script>
+</body>
+</html>
+
+app.ts
+let message: string = 'Hello, World!';
+// create a new heading 1 element
+let heading = document.createElement('h1');
+heading.textContent = message;
+// add the heading the document
+document.body.appendChild(heading);
+
+output
+Hello,World
+____________________________________________________________________________________________________________________________________________________________________________________
+app.ts
+
+let message: string = 'Hello, TypeScript!';
+
+let heading = document.createElement('h1');
+heading.textContent = message;
+
+document.body.appendChild(heading);
+
+output
+Hello,Typescript
+
+____________________________________________________________________________________________________________________________________________________________________________________
+objects
+
+let employee: object;
+employee = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    jobTitle: 'Web Developer'
+};
+
+console.log(employee);
+
+output
+[LOG]: {
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 25,
+  "jobTitle": "Web Developer"
+} 
+*****************************************************************************
+let employee: {
+    firstName: string;
+    lastName: string;
+    age: number;
+    jobTitle: string;
+} = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    jobTitle: 'Web Developer'
+};
+
+output
+
+[LOG]: {
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 25,
+  "jobTitle": "Web Developer"
+} 
+____________________________________________________________________________________________________________________________________________________________________________________
+Tuple
+
+let skill:[string,number]
+skill=['abc',5]
+
+let color:[number,number,number]=[255,0,0]
+
+let bgcolor,headclr:[number,number,number,number?]
+bgcolor = [0, 255, 255, 0.5];
+headclr = [0, 255, 255];
+__________________________________________________________________________________________________________________________________________________________________________________
+Arrays
+let skill:string[];
+skill=['abc','def'];
+
+console.log(skill[0])
+console.log(skill[1])
+skill.push("hi")
+
+let skill:string[];
+skill=['abc','hi','def'];
+skill.push(2)  //error
+
+let skill = skills[0];
+console.log(typeof(skill));
+
+let series = [1, 2, 3];
+console.log(series.length); // 3
+
+//forEach
+var num = [7, 8, 9];
+num.forEach(function (value) {
+    console.log(value);
+});
+
+//map()
+let series = [1, 2, 3];
+let doubleIt = series.map(e => e* 2);
+console.log(doubleIt);
+
+//[ 2, 4, 6 ] 
+
+//reducedSizee sysntax 
+//array.reduce(callback[, initialValue]);
+
+var total = [0, 1, 2, 3].reduce(function(a, b){ return a + b; }); 
+console.log("total is : " + total );
+
+
+//filter()
+//array.filter (callback[, thisObject]);
+
+function isBigEnough(element, index, array) { 
+   return (element >= 10); 
+} 
+          
+var passed = [12, 5, 8, 130, 44].filter(isBigEnough); 
+console.log("Test Value : " + passed );
+
+let scores : (string | number)[];
+scores = ['Programming', 5, 'Software Design', 4]; 
+
+
+____________________________________________________________________________________________________________________________________________________________________________________
+enum
+
+enum Month {
+    Jan,
+    Feb,
+    Mar,
+    Apr,
+    May,
+    Jun,
+    Jul,
+    Aug,
+    Sep,
+    Oct,
+    Nov,
+    Dec
+};
+
+function isItSummer(month: Month) {
+    let isSummer: boolean;
+    switch (month) {
+        case Month.Jun:
+        case Month.Jul:
+        case Month.Aug:
+            isSummer = true;
+            break;
+        default:
+            isSummer = false;
+            break;
+    }
+    return isSummer;
+}
+
+
+console.log(isItSummer(Month.Jun)); // true
+
+console.log(isItSummer(6)); // true
+
+
+var Month;
+(function (Month) {
+    Month[Month["Jan"] = 0] = "Jan";
+    Month[Month["Feb"] = 1] = "Feb";
+    Month[Month["Mar"] = 2] = "Mar";
+    Month[Month["Apr"] = 3] = "Apr";
+    Month[Month["May"] = 4] = "May";
+    Month[Month["Jun"] = 5] = "Jun";
+    Month[Month["Jul"] = 6] = "Jul";
+    Month[Month["Aug"] = 7] = "Aug";
+    Month[Month["Sep"] = 8] = "Sep";
+    Month[Month["Oct"] = 9] = "Oct";
+    Month[Month["Nov"] = 10] = "Nov";
+    Month[Month["Dec"] = 11] = "Dec";
+})(Month || (Month = {}));
+
+{
+  '0': 'Jan', 
+  '1': 'Feb', 
+  '2': 'Mar', 
+  '3': 'Apr', 
+  '4': 'May', 
+  '5': 'Jun', 
+  '6': 'Jul', 
+  '7': 'Aug', 
+  '8': 'Sep', 
+  '9': 'Oct', 
+  '10': 'Nov',
+  '11': 'Dec',
+  Jan: 0,     
+  Feb: 1,     
+  Mar: 2,     
+  Apr: 3,     
+  May: 4,
+  Jun: 5,
+  Jul: 6,
+  Aug: 7,
+  Sep: 8,
+  Oct: 9,
+  Nov: 10,
+  Dec: 11
+}
+
+enum Month {
+    Jan = 1,
+    Feb,
+    Mar,
+    Apr,
+    May,
+    Jun,
+    Jul,
+    Aug,
+    Sep,
+    Oct,
+    Nov,
+    Dec
+};
+
+
+enum ApprovalStatus {
+    draft,
+    submitted,
+    approved,
+    rejected
+};
+
+const request =  {
+    id: 1,
+    status: ApprovalStatus.approved,
+    description: 'Please approve this request'
+};
+
+if(request.status === ApprovalStatus.approved) {
+    // send an email
+    console.log('Send email to the Applicant...');
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________

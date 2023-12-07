@@ -4,6 +4,12 @@ console.log(message);
 output
 Hello,World
 
+types
+let num:number;
+let str:string;
+let b:boolean;
+let bi:bigInt;
+let st:string[];
 
 ____________________________________________________________________________________________________________________________________________________________________________________
 <!DOCTYPE html>

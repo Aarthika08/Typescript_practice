@@ -33,4 +33,23 @@ output
 > [!NOTE]
 > Use type aliases to define new names for existing types.
 
+# string literals
 
+** example 1 **
+
+> let click='click';
+
+** example 2 **
+
+>let mouseevent = 'click|dblclick|mouseup|mousedown';
+>
+>mouseevent='click';
+>
+>>mouseevent = 'dblclick';
+>
+>mouseevent = 'mouseup';
+>
+>mouseevent = 'mousedown';
+>
+>mouseevent = 'scroll'; //error
+>

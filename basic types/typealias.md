@@ -35,17 +35,17 @@ output
 
 # string literals
 
-** example 1 **
+**example 1**
 
 > let click='click';
 
-** example 2 **
+**example 2**
 
 >let mouseevent = 'click|dblclick|mouseup|mousedown';
 >
 >mouseevent='click';
 >
->>mouseevent = 'dblclick';
+>mouseevent = 'dblclick';
 >
 >mouseevent = 'mouseup';
 >

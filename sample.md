@@ -1,0 +1,42 @@
+text
+
+code 
+function raiseError(message: string): never {
+    throw new Error(message);
+}
+function reject() { 
+    return raiseError('Rejected');
+ }
+
+ reject()
+
+ output
+[ERR]: Rejected 
+
+function fn(a: string | number): boolean {
+  if (typeof a === "string") {
+    return true;
+  } else if (typeof a === "number") {
+    return false;
+  } 
+}
+output
+Function lacks ending return statement and return type does not include 'undefined'.
+
+function fn(a: string | number): boolean {
+  if (typeof a === "string") {
+    return true;
+  } else if (typeof a === "number") {
+    return false;
+  }  
+  // make the function valid
+  return neverOccur();
+}
+
+let neverOccur = () => {
+   throw new Error('Never!');
+} 
+
+output
+
+Never

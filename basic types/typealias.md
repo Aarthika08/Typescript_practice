@@ -1,10 +1,12 @@
 #  introduction to TypeScript type aliases
 Type aliases allow you to create a new name for an existing type. 
+
 ###syntax:
 
 > type alias = existingType;
 
 The existing type can be any valid TypeScript type.
+
 
 ###example 
 
@@ -31,6 +33,6 @@ output
 > Use type aliases to define new names for existing types.
 
 > [!NOTE]
-> Highlights information that users should take into account, even when skimming.
+> Use type aliases to define new names for existing types.
 
 

@@ -5,7 +5,7 @@ Type aliases allow you to create a new name for an existing type.
 
 > type alias = existingType;
 
-The existing type can be any valid TypeScript type.
+The existing type can be any valid TypeScript type. 
 
 
 ### example 

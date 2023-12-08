@@ -1,20 +1,28 @@
-# ** introduction to TypeScript type aliases**
-Type aliases allow you to create a new name for an existing type. The following shows the syntax of the type alias:
+#  introduction to TypeScript type aliases
+Type aliases allow you to create a new name for an existing type. 
+###syntax:
 
 > type alias = existingType;
+
 The existing type can be any valid TypeScript type.
 
-> [!NOTE] 
-> Highlights information that users should take into account, even when skimming.
+###example 
 
-> [!TIP]
-> Optional information to help a user be more successful.
+>type chars=string;
+>let message=chars
+>console.log(message)
 
-> [!IMPORTANT]
-> Crucial information necessary for users to succeed.
+output
+>string
 
-> [!WARNING]
-> Critical content demanding immediate user attention due to potential risks.
+**code 2**
 
-> [!CAUTION]
-> Negative potential consequences of an action.
+>type alphanumeric=number|string
+>let msg=alphanumeric
+>msg=12
+>msg="abc"
+>msg=true //error
+
+>[!summary]
+>Use type aliases to define new names for existing types.
+

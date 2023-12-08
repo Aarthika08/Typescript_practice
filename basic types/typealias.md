@@ -29,8 +29,6 @@ output
 >
 >msg=true ;//error
 
-> [!SUMMARY]
-> Use type aliases to define new names for existing types.
 
 > [!NOTE]
 > Use type aliases to define new names for existing types.

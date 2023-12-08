@@ -4,7 +4,7 @@ Type aliases allow you to create a new name for an existing type. The following 
 > type alias = existingType;
 The existing type can be any valid TypeScript type.
 
-> [!NOTE]
+> [!NOTE] 
 > Highlights information that users should take into account, even when skimming.
 
 > [!TIP]

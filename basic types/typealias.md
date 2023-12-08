@@ -18,11 +18,19 @@ output
 **code 2**
 
 >type alphanumeric=number|string;
->let msg=alphanumeric
+>
+>let msg=alphanumeric;
+>
 >msg=12;
+>
 >msg="abc";
+>
 >msg=true ;//error
 
-> [!summary]
+> [!SUMMARY]
 > Use type aliases to define new names for existing types.
+
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
 

@@ -17,7 +17,7 @@ switch ( expression ) {
 
 example 1
 
-let target : string="a"
+let target ="a"
 
 switch(target)
 {

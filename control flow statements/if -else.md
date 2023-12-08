@@ -28,9 +28,11 @@
 >counter = 1;
 >
 >}
+>
+>console.log(counter);
+
 
 **Ternary operator ?:**
 
 > condition?true:false
 
-console.log(counter);

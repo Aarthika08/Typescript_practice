@@ -4,7 +4,7 @@ switch ( expression ) {
    case value1:
        // statement 1
        break;
-   case value2:
+   case value2: 
        // statement 2
        break;
    case valueN:

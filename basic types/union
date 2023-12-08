@@ -23,8 +23,9 @@ output
 [LOG]: "appleis a fruit" 
 
 console.log(add(true,false))--not allowed
-_______________________________________________________________________________________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________
 A union type describes a value that can be one of several types, not just two. For example number | string | boolean is the type of a value that can be a number, a string, or a boolean.
+
 
 function add(a:number|string,b:number|string){
   if (typeof(a)==='number'&& typeof(b)==='number')

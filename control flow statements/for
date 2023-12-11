@@ -1,0 +1,58 @@
+syntax
+
+for(init;cond;inc)
+{ statement;
+}
+
+example 1
+
+const max = 10;
+let counter = 0;
+
+for (let i=0;i<max;i++) {
+    counter++;
+    console.log(counter); // 1
+}
+
+output
+[LOG]: 10 
+[LOG]: 1 
+[LOG]: 2 
+[LOG]: 3 
+[LOG]: 4 
+[LOG]: 5 
+[LOG]: 6 
+[LOG]: 7 
+[LOG]: 8 
+[LOG]: 9 
+[LOG]: 10 
+
+example 2
+
+let counter = 0;
+
+for (; ;) {
+        counter++;
+
+    console.log(counter); // 1
+
+    if(counter>9)
+    {
+        break
+    }
+    
+}
+
+
+output
+
+[LOG]: 1 
+[LOG]: 2 
+[LOG]: 3 
+[LOG]: 4 
+[LOG]: 5 
+[LOG]: 6 
+[LOG]: 7 
+[LOG]: 8 
+[LOG]: 9 
+[LOG]: 10 

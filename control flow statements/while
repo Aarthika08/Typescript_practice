@@ -1,0 +1,53 @@
+
+syntax
+======
+while(cond)
+{
+statement
+}
+
+syntax 2
+=========
+while(condition) {
+    // do something
+    // ...
+
+    if(anotherCondition) 
+        break;
+}
+
+example
+
+let counter = 0;
+
+while (counter < 5) {
+    console.log(counter);
+    counter++;
+}
+
+example 2
+=========
+remove the HTML element in the list using while loop
+
+index.html
+==========
+<ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ul>
+
+script.ts
+=========
+
+let list=document.querySelector('#list');
+
+while(list.firstChild )
+{
+list.removechild(list.firstChild )
+}
+
+output
+=======
+the while statement removes all child nodes of the list element.

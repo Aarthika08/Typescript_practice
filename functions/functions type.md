@@ -37,5 +37,4 @@ example
 >   return x.concat(y).length;
 >
 >};
-
-console.log(add('10','200'))
+>console.log(add('10','200'))

@@ -5,21 +5,24 @@
 
 example 1
 
->function add(a:number,b:number,c?: number):number
+
+>       function add(a:number,b:number,c?: number):number
 >
->{
+>      {
 >
->if (typeof c!=='undefined'){
+>      if (typeof c!=='undefined')
 >
->return a*b*c;
+>     {
 >
->   }
+>        return a*b*c;
 >
->return a*b;
+>     }
 >
->}
+>            return a*b;
 >
->console.log(add(10,20,30))
+>     }
+>
+>     console.log(add(10,20,30))
 
 output
 

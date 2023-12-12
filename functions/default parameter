@@ -1,0 +1,13 @@
+when value is not passed then it takes the default value
+
+Example 1
+  
+function greet(name: string = 'Guest'): void {
+    console.log(`Hello, ${name}!`);
+}
+
+// Calling the function without providing a value for 'name'
+greet(); // Output: Hello, Guest!
+
+// Calling the function with a specific value for 'name'
+greet('John'); // Output: Hello, John!

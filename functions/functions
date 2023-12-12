@@ -1,0 +1,53 @@
+
+syntax
+
+function name(parametr1:type,parameter2:type):return type
+{
+statement 1
+}
+
+example 1
+---------
+function add(a:number,b:number){
+return a+b;
+}
+
+ console.log(add(2,3)) //5
+ output
+ 5
+ //even 
+
+__________________________________________________________________________________________________________________________________________________________________________________
+
+example 2
+--------
+function echo(a:string,b:string):void{
+    console.log(a+b) //5
+
+}
+
+ echo('10', '20');
+ echo('abc','jkl')
+
+ output
+
+ [LOG]: "1020" 
+[LOG]: "abcjkl"
+
+__________________________________________________________________________________________________________________________________________________________________________________
+example 3
+---------
+function add(a:number,b:number):number{
+    return a+b; 
+}
+
+// console.log(add(2,3)) //5
+let sum = add('10', '20');
+
+output
+
+Errors in code
+Argument of type 'string' is not assignable to parameter of type 'number'.
+
+
+

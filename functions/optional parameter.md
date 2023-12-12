@@ -9,13 +9,13 @@ example 1
 >
 >{
 >
->    if (typeof c!=='undefined')
+>if (typeof c!=='undefined'){
 >
->   {
 >        return a*b*c;
 >
 >   }
->          return a*c;
+>
+>return a*b;
 >
 >}
 >

@@ -27,23 +27,23 @@ output
 
 example 2
 
->function add(a:number,b?:number,c: number):number
+>  function add(a:number,b?:number,c: number):number
 >
->{
+>  {
 >
->    if (typeof c!=='undefined')
+>      if (typeof c!=='undefined')
 >
->   {
+>     {
 >
 >        return a*b*c;
 >
->   }
+>     }
 >
->          return a*c;
+>            return a*c;
 >
->}
+>  }
 >
->console.log(add(10,20,30))
+>  console.log(add(10,20,30))
 
 output 
 error

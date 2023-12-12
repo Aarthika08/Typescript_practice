@@ -3,7 +3,7 @@ class counter{
      count():number;
      count(target:number):number[];
      count(target?:number):number|number[]{
-        if(target){
+        if(target){ 
 let values=[];
         for(let start=this.current;start<=target;start++)
         {

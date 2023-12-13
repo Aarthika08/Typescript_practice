@@ -1,3 +1,12 @@
+example1:
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any): any {
+   return a + b;
+}
+
+example 2:
+
 class counter{
     private current:number=0;
      count():number;

@@ -1,0 +1,34 @@
+let tam=Number(prompt("Please enter tamil mark:"));
+let eng=Number(prompt("Please enter english mark:"));
+let mat=Number(prompt("Please enter mat:"));
+let sci=Number(prompt("Please enter sci:"));
+let soc=Number(prompt("Please enter soc:"));
+let total=tam+eng+mat+sci+soc;
+console.log(total)
+
+if(total>=80)
+{
+    let result="pass"
+    console.log("Hello, your grade is A  and your result is " + result + "! and your total is "+total);
+
+}
+else if(total <=79 && total >=40)
+{
+    let result="pass"
+    console.log("Hello, your grade is B  and your result is " + result + "!and your total is "+total);
+
+}
+
+else if(total <=39 && total >=20){
+    let result="pass"
+    console.log("Hello, your grade is C  and your result is " + result + "!and your total is "+total);
+
+}
+else{
+    let result="fail"
+    console.log("Hello, your grade is D  and your result is " + result + "! and your total is "+total);
+
+}
+
+output
+[LOG]: "Hello, your grade is A  and your result is pass! and your total is 328" 

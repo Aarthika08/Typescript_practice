@@ -1,0 +1,26 @@
+Write a function that takes an array of numbers and returns a new array with only the unique numbers (removing duplicates)
+
+ let subject:number[]=[];
+ 
+let total:number=0;
+let sub:number[]=[];
+let n=Number(prompt("Please enter number of subjects:"));
+for (let i:number=0;i<n;i++){
+subject[i]=Number(prompt("Please enter number:"));
+}
+function removeDuplicates(arr:number) {
+    return subject.filter((item,
+        index) => subject.indexOf(item) === index);
+}
+    
+console.log(removeDuplicates(subject));
+else{
+    let result:string="fail"
+    console.log("Hello, your grade is D  and your result is " + result + "! and your total is "+total);
+
+}
+
+output
+
+[LOG]: [78, 87, 88, 67] 
+[LOG]: "Hello, your grade is D  and your result is fail! and your total is 0" 

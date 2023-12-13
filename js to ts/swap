@@ -1,0 +1,11 @@
+let a:number=10
+let b:number=15
+console.log(a,b)
+a=a+b
+b=a-b 
+a=a-b 
+console.log(a,b)
+
+output
+[LOG]: 10,  15 
+[LOG]: 15,  10 

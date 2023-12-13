@@ -1,0 +1,43 @@
+Calculate toal marks and percentage. (Input to be in array)
+
+ let subject:number[]=[];
+  let total:number=0;
+  let n=Number(prompt("Please enter number of subjects:"));
+
+for (let i:number=0;i<n;i++){
+subject[i]=Number(prompt("Please enter number of subjects:"));
+total += subject[i]
+}
+console.log(subject,total)
+let per:number=total/subject.length;
+console.log(per.toFixed(2)+"%")
+
+if(total>=80)
+{
+    let result:string="pass"
+    console.log("Hello, your grade is A  and your result is " + result + "! and your total is "+total);
+
+}
+else if(total <=79 && total >=40)
+{
+    let result:string="pass"
+    console.log("Hello, your grade is B  and your result is " + result + "!and your total is "+total);
+
+}
+
+else if(total <=39 && total >=20){
+    let result:string="pass"
+    console.log("Hello, your grade is C  and your result is " + result + "!and your total is "+total);
+
+}
+else{
+    let result:string="fail"
+    console.log("Hello, your grade is D  and your result is " + result + "! and your total is "+total);
+
+}
+
+output
+
+[LOG]: [65, 78, 56, 76],  275 
+[LOG]: "68.75%" 
+[LOG]: "Hello, your grade is A  and your result is pass! and your total is 275" 

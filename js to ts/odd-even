@@ -1,0 +1,25 @@
+
+let first=Number(prompt("enter your first number"));
+let second=Number(prompt("enter your second number"));
+console.log(odd_even(first))
+console.log(odd_even(second))
+
+function odd_even(num:number)
+{
+    if(num % 2 == 0) {
+        console.log("The number is even."+num);
+    }
+    
+    // if the number is odd
+    else {
+        console.log("The number is odd."+num);
+    }
+    
+}
+
+output
+
+[LOG]: "The number is even.40" 
+[LOG]: undefined 
+[LOG]: "The number is odd.43" 
+[LOG]: undefined 

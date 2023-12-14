@@ -1,0 +1,20 @@
+// Write a function that checks if a given string is a valid username. A valid username should contain only alphanumeric characters and underscores, and should be between 4 and 16 characters long.
+// Write a function called isValidUsername that takes a string username in its parameter and returns true or false.
+
+function isValidUsername(username:string){
+    const pattern:string=/^[a-zA-Z0-9_!@#$%^&*()-+=<>?.,;:'"{}[\]\\/]{4,16}$/;
+  return pattern.test(username);
+}
+
+let a:string=prompt("Please enter username:");
+let t:boolean=isValidUsername(a)
+console.log(isValidUsername(a));  
+
+if (t){
+    console.log('success');  
+
+}
+else{
+    console.log('give correct username'); 
+
+}

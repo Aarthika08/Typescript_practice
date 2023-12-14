@@ -1,4 +1,4 @@
-try{
+ try{
     let a:string=prompt("enter any number")
     let t:number=parseInt(a)
     if(isNaN(t))

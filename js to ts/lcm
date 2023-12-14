@@ -1,4 +1,4 @@
-// Function to find the greatest common divisor (GCD) using Euclidean algorithm
+ // Function to find the greatest common divisor (GCD) using Euclidean algorithm
 function findGCD(a:number, b:number):number {
     while (b !== 0) {
         const temp:number = b;

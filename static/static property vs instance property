@@ -1,0 +1,45 @@
+Instance property and static proerty have difference between them.The main difference is
+
+// Creating instances
+const instance1 = new Example(42);
+const instance2 = new Example(99);
+
+// Accessing instance property
+console.log(instance1.instanceProperty); // Output: 42
+
+// Accessing static property
+console.log(Example.staticProperty); // Output: I'm static!
+
+
+code
+
+class Example {
+  // Instance property
+  instanceProperty: number;
+
+  // Static property
+  static staticProperty: string = "I'm static!";
+
+  constructor(instanceProperty: number) {
+    this.instanceProperty = instanceProperty;
+  }
+}
+
+// Creating instances
+const instance1 = new Example(42);
+const instance2 = new Example(99);
+
+// Accessing instance property
+console.log(instance1.instanceProperty); // Output: 42
+
+// Accessing static property
+console.log(Example.staticProperty); // Output: I'm static!
+
+
+NOTE
+
+Instance Property:
+Each instance of a class has its own copy of instance properties. These properties are specific to the instance and can have different values for each object created from the class.
+
+Static Property:
+A property that is associated with the class itself rather than instances. There is only one copy of the static property, shared among all instances of the class. It is accessed using the class name.

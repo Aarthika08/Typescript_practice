@@ -1,0 +1,67 @@
+
+// Write a function to Calculate Cab Fare(Business Logic-Switch Case)
+// 1. Micro Rs.10/km
+// 2. Mini Rs.15/km
+// 3. Prime Rs.25/km
+// Based on the km user enters, total payable fare to be shown to the user.
+// You can use add ons - first ride code/ discount code, etc
+
+let a=0;
+        let b=0
+        let t=0
+
+        let dis=0.0
+        let   d=0
+let bus=Number(prompt("enter your option\n 1.Micro\n2.Mini\n3.prime"))
+switch(bus)
+{
+    case 1:
+     a=10;
+         b=Number(prompt("enter how much KM"));
+         t=a*b;
+        console.log("your travel fare is " + t)
+
+         dis=0.5
+           d=(5/100)*t;
+        t=t-d
+        console.log("your travel discount is 5%" )
+
+        console.log("your travel  with discount is " + t)
+        break;
+     case 2:
+         a=15;
+         b=Number(prompt("enter how much KM"));
+                        t=a*b;
+                        console.log("your travel fare is " + t)
+
+                         dis=0.15;
+        d=(15/100)*t;
+        t=t-d
+        console.log("your travel discount is 15%" )
+
+        console.log("your travel  with discount is " + t)
+        break;
+
+     
+    case  3:
+        a=25; 
+        b=Number(prompt("enter how much KM"));
+          t=a*b;
+          console.log("your travel fare is " + t)
+
+           dis=0.25;
+        d=(25/100)*t;
+        t=t-d
+        console.log("your travel discount is 25%" )
+
+        console.log("your travel  with discount is " + t)
+        break;
+default:
+    console.log("ERROR!!!!!Enter from the option");
+
+}
+
+output
+[LOG]: "your travel fare is 315" 
+[LOG]: "your travel discount is 15%" 
+[LOG]: "your travel  with discount is 267.75" 

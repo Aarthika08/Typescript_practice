@@ -1,0 +1,116 @@
+example 1
+abstract class Employee {
+    
+    abstract getSalary(): number;
+    }
+
+    class shape extends Employee{
+        id:number;
+        fn:string;
+                ln:string;
+
+    constructor(id :number,fn:string,ln:string) {
+        super();
+        this.id=id; 
+         this.fn=fn; 
+          this.ln=ln; 
+
+    }
+
+    get fullName(): number {
+         return `${this.id ** 2}  ${this.fn} ${this.ln}`;
+
+    }
+    
+}
+
+let employee = new shape(8,'jo','go');
+console.log(employee.fullName)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+example 2
+abstract class Employee {
+    constructor(private firstName: string, private lastName: string) {
+    }
+    abstract getSalary(): number
+    get fullName(): string {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    compensationStatement(): string {
+        return `${this.fullName} makes ${this.getSalary()} a month.`;
+    }
+}
+class FullTimeEmployee extends Employee {
+    constructor(firstName: string, lastName: string, private salary: number) {
+        super(firstName, lastName);
+    }
+    getSalary(): number {
+        return this.salary;
+    }
+}
+class Contractor extends Employee {
+    constructor(firstName: string, lastName: string, private rate: number, private hours: number) {
+        super(firstName, lastName);
+    }
+    getSalary(): number {
+        return this.rate * this.hours;
+    }
+}
+
+let john = new FullTimeEmployee('John', 'Doe', 12000);
+let jane = new Contractor('Jane', 'Doe', 100, 160);
+
+console.log(john.compensationStatement());
+console.log(jane.compensationStatement());
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+abstract class Shape {
+  abstract calculateArea(): number; // Abstract method without implementation
+}
+
+class Circle extends Shape {
+  radius: number;
+
+  constructor(radius: number) {
+    super();
+    this.radius = radius;
+  }
+
+  calculateArea(): number {
+    return Math.PI * this.radius ** 2;
+  }
+}
+
+class Rectangle extends Shape {
+  width: number;
+  height: number;
+
+  constructor(width: number, height: number) {
+    super();
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea(): number {
+    return this.width * this.height;
+  }
+}
+
+// Abstract class cannot be instantiated directly
+// const shape = new Shape(); // Error: Cannot create an instance of an abstract class.
+
+// Instances of concrete classes
+const circle = new Circle(5);
+const rectangle = new Rectangle(4, 6);
+
+console.log(circle.calculateArea()); // Output: ~78.54
+console.log(rectangle.calculateArea()); // Output: 24
+
+
+explanation
+In this example:
+
+Shape is an abstract class with an abstract method calculateArea(). This method must be implemented by any concrete subclass.
+Circle and Rectangle are concrete classes that extend the Shape abstract class. They provide concrete implementations for the abstract method calculateArea().
+You cannot create an instance of an abstract class directly (e.g., new Shape()). You need to create instances of its concrete subclasses.
+Abstract classes are useful when you want to define a common interface for a group of related classes and enforce that certain methods must be implemented by all subclasses.
+They help provide a level of abstraction and ensure a consistent structure across multiple classes.

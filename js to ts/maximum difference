@@ -1,0 +1,30 @@
+let arr:number[]=[];
+let size=Number(prompt("enter the n"));
+for (let i=0;i<size;i++)
+{
+    arr[i]=Number(prompt("enter the value"));
+}
+let max:number=0;
+console.log(arr)
+console.log('maximum difference value is',maxx(arr))
+function maxx(arr:number[]):number
+{
+    for (let i=0;i<size;i++)
+{
+    for (let j=i+1;j<size;j++){
+   let  diff=arr[i]-arr[j];
+    if(max<diff){
+        max=diff;
+    }
+}
+}
+return max
+}
+
+input:5 4 2 3 1
+output: 4
+
+output
+
+[LOG]: [5, 4, 2, 3, 1] 
+[LOG]: "maximum difference value is",  4 

@@ -1,0 +1,96 @@
+NOTE
+
+The class which inherits properties and methods is called the child class. And the class whose properties and methods are inherited is known as the parent class. 
+These names come from the nature that children inherit genes from their parents.
+
+
+Example 1
+
+class Person{
+    constructor(private fn:string,private ln:string){
+        this.fn=fn;
+        this.ln=ln;
+
+
+    }
+    getFullName():string{
+        return '${this.fn}${this.fn}'
+    }
+     des():string{
+        return 'This is ${this.fn}${this.fn}'
+    }
+}
+
+class emp extends Person{
+    constructor(
+        first:string,
+        last:string,
+        private job:string
+    )
+    {
+        super(first,last)
+    }
+}
+
+let empl = new emp('John','Doe','Front-end Developer');
+console.log(empl)
+
+
+METHOD OVERRIDING
+Example 2
+class Person{
+    constructor(private fn:string,private ln:string){
+        this.fn=fn;
+        this.ln=ln;
+
+
+    }
+    getFullName():string{
+        return `${this.fn} ${this.ln}`;
+                // return `${this.fn} ${this.ln}`;
+
+    }
+     des():string{
+        return `This is ${this.fn} ${this.ln}`
+    }
+}
+
+class emp extends Person{
+    constructor(
+        first:string,
+        last:string,
+        private job:string
+    )
+    {
+        super(first,last)
+    }
+
+    des():string{
+        return super.des()+`I'm a  ${this.job}`;
+                // return super.describe() + `I'm a ${this.jobTitle}.`;
+
+    }
+}
+
+let empl = new emp('John','Doe','Front-end Developer');
+console.log(empl)
+console.log(empl.getFullName());
+console.log(empl.des());
+
+output
+[LOG]: emp: {
+  "fn": "John",
+  "ln": "Doe",
+  "job": "Front-end Developer"
+} 
+[LOG]: "John Doe" 
+[LOG]: "This is John DoeI'm a  Front-end Developer" 
+
+NOTE 
+
+In the describe() method, we called the describe() method of the parent class using the syntax super.methodInParentClass().
+
+If you call the describe() method on the employee object, the describe() method in the Employee class is invoked:
+
+
+

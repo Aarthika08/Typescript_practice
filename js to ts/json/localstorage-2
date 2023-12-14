@@ -1,0 +1,28 @@
+Store a name, userId in LocalStorage
+        Instead of storing individual data , store it as an object
+        Display the user details(id,name)
+
+
+interface user{
+    userid:number;
+username:string;
+}
+
+const userdata:user={username:"abcd",userid:25};
+localStorage.setItem("userdata",JSON.stringify(userdata));
+
+//         Retrieve the data from localStorage
+
+let item=localStorage.getItem("userdata");
+if(item)
+{
+let user_data=JSON.parse(item);
+console.log(userdata.username);
+console.log(userdata.userid);
+
+
+}
+else
+{
+console.log("ERROR!!!!No data")
+}

@@ -3,7 +3,7 @@ function findGCD(a:number, b:number):number {
     while (b !== 0) {
         const temp:number = b;
         b = a % b;
-        a = temp;
+        a = temp; 
     }
     return a;
 }

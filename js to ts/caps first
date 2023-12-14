@@ -1,0 +1,17 @@
+function longestWord(str:string) 
+    {
+    const words:string = str.split(/\s+/);
+
+    let longest=''
+    const capitalizedWords:string = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+    const resultString:string = capitalizedWords.join(' ');
+
+    return resultString
+}
+
+const inputString:string = "The quick brown fox jumps over the lazy dog";
+const result:string = longestWord(inputString);
+console.log(result); 
+
+output
+[LOG]: "The Quick Brown Fox Jumps Over The Lazy Dog" 

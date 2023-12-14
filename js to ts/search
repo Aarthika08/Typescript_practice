@@ -1,0 +1,18 @@
+let name:string=prompt('enter dept name');
+let dict:{[key:string]:string[]}={"ECE":["abc","edf","klo"],"ME":["klo","po"]};
+
+
+console.log("student,list",search(name));
+
+function search(name1:string):string[]|undefined
+{
+    for(let key  in dict)
+    {
+        if(name1=== key)
+        {
+            return dict[key];
+        }
+    }
+}
+
+

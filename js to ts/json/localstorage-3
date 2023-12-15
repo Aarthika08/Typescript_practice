@@ -1,0 +1,68 @@
+Create users array and store users data
+        Store users in LocalStorage
+        Retrieve users data and display user details
+        Add an item to existing Users data in localStorage
+        Search a user exists for the given inputEmailId
+        Search based on multiple input fields
+        Search the data, if not matched print "Invalid Credentials", else store the matched in localStorage
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age: number;
+}
+
+// Create users array and store users data
+const users: User[] = [
+  { id: 1, name: 'John Doe', email: 'john@example.com', age: 25 },
+  { id: 2, name: 'Jane Doe', email: 'jane@example.com', age: 30 },
+];
+
+// Store users in LocalStorage
+localStorage.setItem('users', JSON.stringify(users));
+
+// Retrieve users data and display user details
+const storedUsers: User[] = JSON.parse(localStorage.getItem('users') || '[]');
+console.log('Stored Users:', storedUsers);
+
+// Add an item to existing Users data in localStorage
+const newUser: User = { id: 3, name: 'Bob Smith', email: 'bob@example.com', age: 28 };
+storedUsers.push(newUser);
+localStorage.setItem('users', JSON.stringify(storedUsers));
+
+// Search a user exists for the given inputEmailId
+const inputEmailId = 'jane@example.com';
+const userWithEmail = storedUsers.find((user) => user.email === inputEmailId);
+if (userWithEmail) {
+  console.log('User Found:', userWithEmail);
+} else {
+  console.log('User not found with email:', inputEmailId);
+}
+
+// Search based on multiple input fields
+const searchByNameAndAge = (name: string, age: number): User | undefined => {
+  return storedUsers.find((user) => user.name === name && user.age === age);
+};
+
+const userByNameAndAge = searchByNameAndAge('Bob Smith', 28);
+if (userByNameAndAge) {
+  console.log('User Found:', userByNameAndAge);
+} else {
+  console.log('User not found with the specified name and age.');
+}
+
+// Search the data, if not matched print "Invalid Credentials", else store the matched in localStorage
+const searchUserAndUpdateLocalStorage = (email: string): void => {
+  const user = storedUsers.find((u) => u.email === email);
+
+  if (user) {
+    console.log('User Found:', user);
+    // Perform any operations or store the matched user in localStorage here if needed.
+  } else {
+    console.log('Invalid Credentials');
+  }
+};
+
+const inputEmailToSearch = 'john@example.com';
+searchUserAndUpdateLocalStorage(inputEmailToSearch);

@@ -1,0 +1,251 @@
+function getf(person:{
+  fna:string;
+    lna:string;
+
+
+})
+{
+  return `${person.fna}${person.lna}`;
+}
+let person = {
+    fna: 'John',
+    lna: 'Doe'
+};
+
+console.log(getf(person));
+
+output
+
+[LOG]: "JohnDoe" 
+__________________________________________________________________________________________________________________________________________________________________________________________
+example 2
+//interface 
+interface person{
+  fna:string;
+  lna:string;
+}
+
+//using function
+function getfullname(Person:person):string
+{
+  return `${person.fna}${person.lna}`;
+}
+let person = {
+    fna: 'John',
+    lna: 'Doe'
+};
+console.log(getfullname(person));
+
+//assigning to variable using interface
+let y:person=`${person.fna}${person.lna}`;
+console.log(y);
+
+output
+[LOG]: "JohnDoe" 
+[LOG]: "JohnDoe" 
+
+__________________________________________________________________________________________________________________________________________________________________________________________
+
+example 3
+
+interface person{
+  fna:string;
+    lna:string;
+    middleName:string,
+    age:number
+
+}
+
+function getf(Person:person):string
+{
+  return `${Person.fna}${Person.lna}`;
+}
+
+let person = {
+    fna: 'John',
+    lna: 'Doe'
+};
+console.log(getf(person));
+
+//assigning to variable using interface
+let y:person=`${person.fna}${person.lna}`;
+console.log(y);
+
+let jane = {
+   fna: 'Jane',
+   lna: 'Doe',
+   middleName: 'K.',
+   age: 22,
+};
+
+console.log(getf(jane));
+
+let fullName = getf(jane);
+console.log(fullName); 
+
+output
+
+
+interface person{
+  fna:string;
+    lna:string;
+    middleName:string,
+    age:number
+
+}
+
+function getf(Person:person):string
+{
+  return `${Person.fna}${Person.lna}`;
+}
+
+let person = {
+    fna: 'John',
+    lna: 'Doe'
+};
+console.log(getf(person));
+
+//assigning to variable using interface
+let y:person=`${person.fna}${person.lna}`;
+console.log(y);
+
+let jane = {
+   fna: 'Jane',
+   lna: 'Doe',
+   middleName: 'K.',
+   age: 22,
+};
+
+console.log(getf(jane));
+
+let fullName = getf(jane);
+console.log(fullName); 
+
+output
+
+[LOG]: "JohnDoe" 
+[LOG]: "JohnDoe" 
+[LOG]: "JaneDoe" 
+[LOG]: "JaneDoe" 
+__________________________________________________________________________________________________________________________________________________________________________________________
+OPTIONAL PROPERTY
+
+example 4
+
+interface person{
+  fna:string;
+    lna:string;
+    mdn?:string,
+    age:number
+
+}
+
+function getf(Person:person):string
+{
+if (person.mdn) {
+        return `${person.fna} ${person.mdn} ${person.lna}`;
+    }
+    else{
+    return `${person.fna} ${person.lna}`;}}
+
+let person = {
+    fna: 'John',
+    lna: 'Doe',
+    mdn:'k'
+};
+console.log(getf(person));
+
+//assigning to variable using interface
+let y:person=`${person.fna}${person.lna}`;
+console.log(y);
+
+output
+
+[LOG]: "John k Doe" 
+[LOG]: "JohnDoe" 
+__________________________________________________________________________________________________________________________________________________________________________________________
+READ ONLY PROPERTY
+
+example 5
+
+interface Person {
+    readonly ssn: string;
+    firstName: string;
+    lastName: string;    
+}
+
+let person: Person;
+person = {
+    ssn: '171-28-0926',
+    firstName: 'John',
+    lastName: 'Doe'
+}
+person.ssn = '171-28-0000';
+
+OUTPUT
+Errors in code
+Cannot assign to 'ssn' because it is a read-only property.
+
+__________________________________________________________________________________________________________________________________________________________________________________________
+FUNCTION TYPES
+
+example 6
+interface Person {
+    ( ssn: string,
+    firstName: string):string   
+}
+
+let person: Person;
+person =function(ssn:string,firstname:string){
+        return firstname ? ssn.toLocaleUpperCase() : ssn.toLocaleLowerCase();
+
+}
+
+console.log(person('hi', 'jhh'));
+
+output
+
+[LOG]: "HI" 
+
+interface Person {
+    ( ssn: string,
+    firstName: string):string   
+}
+
+let person: Person;
+person =function(ssn:string){
+return ssn.toLowerCase();
+}
+
+console.log(person('hi', 'jhh'));
+output
+[LOG]: "hi" 
+__________________________________________________________________________________________________________________________________________________________________________________________
+CLASS TYPE
+
+EXAMPLE 8
+
+interface Json {
+     tojson():string
+}
+
+class Person implements Json{
+    constructor(private fn:string)
+    {
+
+    }
+         tojson():string{
+return JSON.stringify(this);}
+
+}
+let person = new Person('John');
+console.log(person.tojson());
+
+output
+[LOG]: "{"fn":"John"}" 
+
+
+
+
+
+

@@ -1,4 +1,4 @@
-interface userData{
+ interface userData{
     user:{
 firstname:string;
 lastname:string;

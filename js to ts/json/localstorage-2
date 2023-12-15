@@ -4,7 +4,7 @@ Store a name, userId in LocalStorage
 
 
 interface user{
-    userid:number;
+    userid:number; 
 username:string;
 }
 

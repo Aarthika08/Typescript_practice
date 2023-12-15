@@ -1,3 +1,13 @@
+Update a specific data in LocalStorage
+        Store a user data
+        Update the field from active=0 to active=1 and store it back in localStorage
+        Store multiple users data
+        Update active field from 0 to 1 for user who has id=102
+
+
+
+
+
 interface User{
     id:number;
     name:string;

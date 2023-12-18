@@ -16,7 +16,7 @@ The type of the return value is number that follows the fat arrow (=>) appeared 
 
 >add=function(firstnumber:number,secondnumber:number){
 >
->return a+b
+>return firstnumber+secondnumber;
 >
 >}
 
@@ -26,7 +26,7 @@ The type of the return value is number that follows the fat arrow (=>) appeared 
 >
 >function(firstnumber:number,secondnumber:number){
 >
->return a+b
+>return firstnumber+secondnumber;
 >
 >}
 

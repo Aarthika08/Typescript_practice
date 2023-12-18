@@ -2,43 +2,40 @@
 
 METHOD OVERRIDING
 Example 2
-class Person{
-    constructor(private fn:string,private ln:string){
-        this.fn=fn;
-        this.ln=ln;
-
-
+class Person {
+    constructor(private firstName: string, private lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-    getFullName():string{
-        return `${this.fn} ${this.ln}`;
-                // return `${this.fn} ${this.ln}`;
 
+    getFullName(): string {
+        return `${this.firstName} ${this.lastName}`;
     }
-     des():string{
-        return `This is ${this.fn} ${this.ln}`
+
+    describe(): string {
+        return `This is ${this.firstName} ${this.lastName}`;
     }
 }
 
-class emp extends Person{
+class Employee extends Person {
     constructor(
-        first:string,
-        last:string,
-        private job:string
-    )
-    {
-        super(first,last)
+        firstName: string,
+        lastName: string,
+        private job: string
+    ) {
+        super(firstName, lastName);
     }
 
-    des():string{
-        return super.des()+`I'm a  ${this.job}`;
-                // return super.describe() + `I'm a ${this.jobTitle}.`;
-
+    describe(): string {
+        return super.describe() + ` I'm a ${this.job}.`;
     }
 }
 
-let empl = new emp('John','Doe','Front-end Developer');
-console.log(empl)
-console.log(empl.getFullName());
+const employee = new Employee('John', 'Doe', 'Front-end Developer');
+console.log(employee);
+console.log(employee.getFullName());
+console.log(employee.describe());
+
 console.log(empl.des());
 
 output

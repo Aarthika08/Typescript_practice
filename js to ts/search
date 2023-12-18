@@ -1,5 +1,5 @@
 let name:string=prompt('enter dept name');
-let dict:{[key:string]:string[]}={"ECE":["abc","edf","klo"],"ME":["klo","po"]};
+let dict:{[key:string]:string[]}={"Engineerring":["EEE","ECE","CSE"],"Arts":["BSC","BA"]};
 
 
 console.log("student,list",search(name));

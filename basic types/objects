@@ -1,3 +1,4 @@
+employee.ts
 
 const employee: object = {
     firstName: 'John',
@@ -17,6 +18,8 @@ output
   "jobTitle": "Web Developer"
 } 
 *****************************************************************************
+employee1.ts
+
 const employee: {
     firstName: string;
     lastName: string;

@@ -1,4 +1,4 @@
-
+ 
 let first=Number(prompt("enter your first number"));
 let second=Number(prompt("enter your second number"));
 console.log(odd_even(first))

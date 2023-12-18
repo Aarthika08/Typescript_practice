@@ -3,7 +3,7 @@ syntax
 function fn(...variable_name:number[]):number
 { 
   statements...
-
+}
 
 example 1
 

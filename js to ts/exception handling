@@ -1,21 +1,20 @@
- try{
-    let a:string=prompt("enter any number")
-    let t:number=parseInt(a)
-    if(isNaN(t))
-    {
-        throw new Error("invalid")
-    }
-    let h=t*2
-    console.log(h)
-}
-catch(exception)
-{
-    console.error("An error occurred:", Error.message);
-} finally {
-  // Code that will always run, regardless of whether there was an exception
-  console.log("Execution completed.");
+try {
+    const inputString: string | null = prompt("Enter any number");
+    const inputValue: number = parseInt(inputString ?? '');
 
+    if (isNaN(inputValue)) {
+        throw new Error("Invalid input");
+    }
+
+    const result: number = inputValue * 2;
+    console.log(result);
+} catch (error) {
+    console.error("An error occurred:", error.message);
+} finally {
+    // Code that will always run, regardless of whether there was an exception
+    console.log("Execution completed.");
 }
+
 
 output
 6

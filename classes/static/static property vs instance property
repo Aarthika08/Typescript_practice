@@ -1,4 +1,5 @@
-Instance property and static proerty have difference between them.The main difference is
+ Instance property and static proerty have difference between them.The main difference is
+program.ts
 
 // Creating instances
 const instance1 = new Example(42);

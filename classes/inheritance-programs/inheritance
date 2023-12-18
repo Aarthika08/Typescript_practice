@@ -1,1 +1,37 @@
-kjjc
+ NOTE
+
+The class which inherits properties and methods is called the child class. And the class whose properties and methods are inherited is known as the parent class. 
+These names come from the nature that children inherit genes from their parents.
+
+
+Example 1
+
+class Person {
+    constructor(private firstName: string, private lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getFullName(): string {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    describe(): string {
+        return `This is ${this.firstName} ${this.lastName}`;
+    }
+}
+
+class Employee extends Person {
+    constructor(
+        firstName: string,
+        lastName: string,
+        private job: string
+    ) {
+        super(firstName, lastName);
+    }
+}
+
+const employee = new Employee('John', 'Doe', 'Front-end Developer');
+console.log(employee);
+
+

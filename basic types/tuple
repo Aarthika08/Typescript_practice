@@ -1,4 +1,4 @@
-Tuple
+Tuple.ts
 
 const skill:[string,number]
 skill=['abc',5]

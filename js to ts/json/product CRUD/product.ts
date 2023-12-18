@@ -1,4 +1,4 @@
-interface Product {
+ interface Product {
     name: string;
     price: string;
     image?: Blob;

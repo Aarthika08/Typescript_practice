@@ -2,7 +2,7 @@ let tam=Number(prompt("Please enter tamil mark:"));
 let eng=Number(prompt("Please enter english mark:"));
 let mat=Number(prompt("Please enter mat:"));
 let sci=Number(prompt("Please enter sci:"));
-let soc=Number(prompt("Please enter soc:"));
+let soc=Number(prompt("Please enter soc:")); 
 let total=tam+eng+mat+sci+soc;
 console.log(total)
 

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // DOM elements
     let quote = document.getElementById("quote") as HTMLElement;
     let cite = document.getElementById("author") as HTMLElement;

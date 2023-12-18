@@ -1,4 +1,4 @@
-Create users array and store users data
+ Create users array and store users data
         Store users in LocalStorage
         Retrieve users data and display user details
         Add an item to existing Users data in localStorage

@@ -1,20 +1,20 @@
- // Function to find the greatest common divisor (GCD) using Euclidean algorithm
-function findGCD(a:number, b:number):number {
+// Function to find the greatest common divisor (GCD) using Euclidean algorithm
+function findGCD(a: number, b: number): number {
     while (b !== 0) {
-        const temp:number = b;
+        const temp: number = b;
         b = a % b;
-        a = temp; 
+        a = temp;
     }
     return a;
 }
 
 // Function to find the least common multiple (LCM) using GCD
-function findLCM(a:number, b:number) :number{
+function findLCM(a: number, b: number): number {
     return (a * b) / findGCD(a, b);
 }
 
 // Function to find the smallest common multiple using a switch statement
-function smallestCommonMultiple(num1:number, num2:number):string|number {
+function smallestCommonMultiple(num1: number, num2: number): string | number {
     switch (true) {
         case num1 <= 0 || num2 <= 0:
             return "Please provide positive integers.";
@@ -28,5 +28,5 @@ function smallestCommonMultiple(num1:number, num2:number):string|number {
 }
 
 // Example usage:
-const result = smallestCommonMultiple(3, 4);
+const result: string | number = smallestCommonMultiple(3, 4);
 console.log(result); // Output: 12

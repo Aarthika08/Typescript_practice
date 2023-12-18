@@ -1,16 +1,16 @@
 write  typescript to add two values 
 
-function add(a:any,b:any){
-  if (typeof(a)==='number'&& typeof(b)==='number')
+function add(firstnumber:any,secondnumber:any){
+  if (typeof(firstnumber)==='number'&& typeof(secondnumber)==='number')
   {
     return a+b;
   }
-  else if( (typeof(a)==='string'&& typeof(b)==='string'))
+  else if( (typeof(firstnumber)==='string'&& typeof(secondnumber)==='string'))
   {
-    return a.concat(b);
+    return firstnumber.concat(secondnumber);
   }
   else{
-    throw Error("not running uggg");
+        throw new Error("Operation not supported");
 
   }
 }
@@ -27,17 +27,17 @@ ________________________________________________________________________________
 A union type describes a value that can be one of several types, not just two. For example number | string | boolean is the type of a value that can be a number, a string, or a boolean.
 
 
-function add(a:number|string,b:number|string){
-  if (typeof(a)==='number'&& typeof(b)==='number')
+function add(firstnumber:number|string,secondnumber:number|string){
+  if (typeof(firstnumber)==='number'&& typeof(secondnumber)==='number')
   {
     return a+b
   }
-  else if( (typeof(a)==='string'&& typeof(b)==='string'))
+  else if( (typeof(firstnumber)==='string'&& typeof(secondnumber)==='string'))
   {
-    return a.concat(b)
+    return firstnumber.concat(secondnumber)
   }
   else{
-    throw Error("not running uggg")
+        throw new Error("Operation not supported");
 
   }
 }

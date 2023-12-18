@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
     var productsContainer = document.getElementById("productsContainer");
     var products = JSON.parse(localStorage.getItem("products")) || [];
     products.forEach(function (product) {

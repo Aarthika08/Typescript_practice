@@ -1,4 +1,4 @@
-Calculate toal marks and percentage. (Input to be in array)
+ Calculate toal marks and percentage. (Input to be in array)
 
  let subject:number[]=[];
   let total:number=0;

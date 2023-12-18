@@ -1,25 +1,22 @@
 Write a function that takes a string and returns the longest word in the string. If there are two or more words that are of the same length, return the first one that appears in the string. For example, if the input string is "The quick brown fox jumps over the lazy dog", the function should return "quick".
 
-function longestWord(str:string) :string
-    {
-    const words:string[] = str.split(/\s+/);
+function longestWord(str: string): string {
+    const words: string[] = str.split(/\s+/);
 
-    let longest:string=''
-    let cleanword:string=''
-    let maxstr:number=0
-for (const word of words){
-    if(word.length > longest.length)
-    {
-        longest=word
+    let longest: string = '';
+    for (const word of words) {
+        if (word.length > longest.length) {
+            longest = word;
+        }
     }
+
+    return longest;
 }
 
-    return longest
-}
+const inputString: string = "The quick brown fox jumps over the lazy dog";
+const result: string = longestWord(inputString);
+console.log(result);
 
-const inputString:string = "The quick brown fox jumps over the lazy dog";
-const result:string = longestWord(inputString);
-console.log(result); 
 
 output
 quick

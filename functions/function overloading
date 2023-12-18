@@ -1,8 +1,8 @@
 example1:
-function add(a: number, b: number): number;
-function add(a: string, b: string): string;
-function add(a: any, b: any): any {
-   return a + b;
+function add(firstnumber: number, secondnumber: number): number;
+function add(firstnumber: string, secondnumber: string): string;
+function add(firstnumber: any, secondnumber: any): any {
+   return firstnumber + secondnumber;
 }
  
 example 2
@@ -10,11 +10,11 @@ example 2
 Function overloading with optional parameters
 When you overload a function, the number of required parameters must be the same. If an overload has more parameters than the other, you have to make the additional parameters optional. For example:
 
-function sum(a: number, b: number): number;
-function sum(a: number, b: number, c: number): number;
-function sum(a: number, b: number, c?: number): number {
-    if (c) return a + b + c;
-    return a + b;
+function sum(firstnumber: number, secondnumber: number): number;
+function sum(firstnumber: number, secondnumber: number, thirdnumber: number): number;
+function sum(firstnumber: number, secondnumber: number, thirdnumber?: number): number {
+    if (thirdnumber) return firstnumber + secondnumber + thirdnumber;
+    return firstnumber + secondnumber ;
 }
 Code language: TypeScript (typescript)
 The sum() function accepts either two or three numbers. The third parameter is optional. If you don’t make it optional, you will get an error.

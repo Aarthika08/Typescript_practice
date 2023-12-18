@@ -1,4 +1,4 @@
-Store a name, userId in LocalStorage
+ Store a name, userId in LocalStorage
         Instead of storing individual data , store it as an object
         Display the user details(id,name)
 

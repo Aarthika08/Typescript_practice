@@ -1,68 +1,61 @@
- interface userData{
-    user:{
-firstname:string;
-lastname:string;
-email:string;
-password:string;
-roles:string[];
-preferences:{
-    theme:string;
-    lang:string;
-    department?:string};
+interface UserData {
+    user: {
+        firstname: string;
+        lastname: string;
+        email: string;
+        password: string;
+        roles: string[];
+        preferences: {
+            theme: string;
+            lang: string;
+            department?: string;
+        };
     };
 }
 
+const userData: UserData = {
+    user: {
+        firstname: "john",
+        lastname: "Doe",
+        email: "abc@gmail.com",
+        password: "!@#***",
+        roles: ['abc', 'xyz'],
+        preferences: {
+            theme: "dark",
+            lang: "eng",
+        },
+    },
+};
 
-let  text:userData={
-        user:{
-            firstname:"john",
-            lastname:"Doe",
-        email:"abc@gmail.com",
-        password:"!@#***",
-        roles:['abc','xyz'],
-        preferences:{
-            theme:"dark",
-            lang:"eng",
-            },
-},
-        
-    };
-
-
-
-
-
-let json={
-    "user1":[
-        {"name":"abc","age":21},
-        {"name":"ac","age":26},
-        {"name":"abcd","age":31},
-        ]
-}
+const jsonData = {
+    "user1": [
+        { "name": "abc", "age": 21 },
+        { "name": "ac", "age": 26 },
+        { "name": "abcd", "age": 31 },
+    ]
+};
 
 // Accessing the data
-console.log(text.user.firstname)
-console.log(json.user1[0])
+console.log(userData.user.firstname);
+console.log(jsonData.user1[0]);
 
-//adding
-text.user.preferences["department"]="MCA";
-console.log(text.user)
+// Adding
+userData.user.preferences["department"] = "MCA";
+console.log(userData.user);
 
+// Deleting the password
+delete userData.user.password;
+console.log('Deleted content', userData.user);
 
-//deleting the password
-delete text.user.password;
-console.log('deleted content',text.user)
+// Converting into string
+const jsonString = JSON.stringify(userData);
+console.log(jsonString);
+console.log(typeof jsonString);
 
-//converting into string
-let str=JSON.stringify(text);
-console.log(str)
-console.log(typeof(str))
-
-
-//converting into json(object)
-let s=JSON.parse(str)
-console.log(s)
-console.log(typeof(s))
+// Converting into JSON (object)
+const parsedData = JSON.parse(jsonString);
+console.log(parsedData);
+console.log(typeof parsedData);
 
 output
 

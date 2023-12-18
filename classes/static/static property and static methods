@@ -1,3 +1,5 @@
+math_operation.ts
+
 class mathopt
 {
     //static property
@@ -8,7 +10,7 @@ class mathopt
         return x+y;
     }
     //static method
-    static mul(x:number,y:number):number{
+    static multiply(x:number,y:number):number{
         return x*y;
     }
 }
@@ -20,10 +22,12 @@ console.log('Value of PI:', mathopt.pi);
 const sumResult = mathopt.add(5, 3);
 console.log('Sum:', sumResult);
 
-const productResult = mathopt.mul(4, 6);
+const productResult = mathopt.multiply(4, 6);
 console.log('Product:', productResult);
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Employee_head_count.ts
+
 class Employee {
     static headcount: number = 0;
 
@@ -31,11 +35,10 @@ class Employee {
         private firstName: string,
         private lastName: string,
         private jobTitle: string) {
-
         Employee.headcount++;
     }
-}let john = new Employee('John', 'Doe', 'Front-end Developer');
-let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
+}let employee1 = new Employee('John', 'Doe', 'Front-end Developer');
+let employee2 = new Employee('Jane', 'Doe', 'Back-end Developer');
 
 console.log(Employee.headcount); // 2
 
@@ -52,6 +55,8 @@ where you want to maintain shared information across all instances of a class.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 STATIC METHOD
+Employee_head_count1.ts
+
 
 class Employee {
     private static headcount: number = 0;
@@ -69,7 +74,7 @@ class Employee {
     }
 }
 
-let john = new Employee('John', 'Doe', 'Front-end Developer');
-let jane = new Employee('Jane', 'Doe', 'Back-end Developer');
+let employee1 = new Employee('John', 'Doe', 'Front-end Developer');
+let employee2 = new Employee('Jane', 'Doe', 'Back-end Developer');
 
 

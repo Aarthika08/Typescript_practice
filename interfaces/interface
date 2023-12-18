@@ -1,18 +1,17 @@
-function getf(person:{
-  fna:string;
-    lna:string;
-
-
-})
-{
-  return `${person.fna}${person.lna}`;
+function getFullName(person: {
+    firstName: string;
+    lastName: string;
+}): string {
+    return `${person.firstName} ${person.lastName}`;
 }
-let person = {
-    fna: 'John',
-    lna: 'Doe'
+
+const individual = {
+    firstName: 'John',
+    lastName: 'Doe'
 };
 
-console.log(getf(person));
+console.log(getFullName(individual));
+
 
 output
 
@@ -20,24 +19,24 @@ output
 __________________________________________________________________________________________________________________________________________________________________________________________
 example 2
 //interface 
-interface person{
-  fna:string;
-  lna:string;
+interface Person {
+    firstName: string;
+    lastName: string;
 }
 
-//using function
-function getfullname(Person:person):string
-{
-  return `${person.fna}${person.lna}`;
+// Using function
+function getFullName(person: Person): string {
+    return `${person.firstName}${person.lastName}`;
 }
-let person = {
-    fna: 'John',
-    lna: 'Doe'
+
+const individual: Person = {
+    firstName: 'John',
+    lastName: 'Doe'
 };
-console.log(getfullname(person));
+console.log(getFullName(individual));
 
-//assigning to variable using interface
-let y:person=`${person.fna}${person.lna}`;
+// Assigning to variable using interface
+const y: string = `${individual.firstName}${individual.lastName}`;
 console.log(y);
 
 output
@@ -48,78 +47,75 @@ ________________________________________________________________________________
 
 example 3
 
-interface person{
-  fna:string;
-    lna:string;
-    middleName:string,
-    age:number
-
+interface Person {
+    firstName: string;
+    lastName: string;
+    middleName: string;
+    age: number;
 }
 
-function getf(Person:person):string
-{
-  return `${Person.fna}${Person.lna}`;
+function getFullName(person: Person): string {
+    return `${person.firstName}${person.lastName}`;
 }
 
-let person = {
-    fna: 'John',
-    lna: 'Doe'
+const individual = {
+    firstName: 'John',
+    lastName: 'Doe'
 };
-console.log(getf(person));
+console.log(getFullName(individual));
 
-//assigning to variable using interface
-let y:person=`${person.fna}${person.lna}`;
+// Assigning to variable using interface
+const y: string = `${individual.firstName}${individual.lastName}`;
 console.log(y);
 
-let jane = {
-   fna: 'Jane',
-   lna: 'Doe',
-   middleName: 'K.',
-   age: 22,
+const jane = {
+    firstName: 'Jane',
+    lastName: 'Doe',
+    middleName: 'K.',
+    age: 22,
 };
 
-console.log(getf(jane));
+console.log(getFullName(jane));
 
-let fullName = getf(jane);
-console.log(fullName); 
-
-output
+const fullName: string = getFullName(jane);
+console.log(fullName);
 
 
-interface person{
-  fna:string;
-    lna:string;
-    middleName:string,
-    age:number
+____________________________________________________________________________________________________________________________________________________________________________
+example
 
+interface Person {
+    firstName: string;
+    lastName: string;
+    middleName: string;
+    age: number;
 }
 
-function getf(Person:person):string
-{
-  return `${Person.fna}${Person.lna}`;
+function getFullName(person: Person): string {
+    return `${person.firstName}${person.lastName}`;
 }
 
-let person = {
-    fna: 'John',
-    lna: 'Doe'
+const individual: Person = {
+    firstName: 'John',
+    lastName: 'Doe'
 };
-console.log(getf(person));
+console.log(getFullName(individual));
 
-//assigning to variable using interface
-let y:person=`${person.fna}${person.lna}`;
+// Assigning to variable using interface
+const y: string = `${individual.firstName}${individual.lastName}`;
 console.log(y);
 
-let jane = {
-   fna: 'Jane',
-   lna: 'Doe',
-   middleName: 'K.',
-   age: 22,
+const jane: Person = {
+    firstName: 'Jane',
+    lastName: 'Doe',
+    middleName: 'K.',
+    age: 22,
 };
 
-console.log(getf(jane));
+console.log(getFullName(jane));
 
-let fullName = getf(jane);
-console.log(fullName); 
+const fullName: string = getFullName(jane);
+console.log(fullName);
 
 output
 
@@ -131,33 +127,33 @@ ________________________________________________________________________________
 OPTIONAL PROPERTY
 
 example 4
-
-interface person{
-  fna:string;
-    lna:string;
-    mdn?:string,
-    age:number
-
+interface Person {
+    firstName: string;
+    lastName: string;
+    middleName?: string;
+    age: number;
 }
 
-function getf(Person:person):string
-{
-if (person.mdn) {
-        return `${person.fna} ${person.mdn} ${person.lna}`;
+function getFullName(person: Person): string {
+    if (person.middleName) {
+        return `${person.firstName} ${person.middleName} ${person.lastName}`;
+    } else {
+        return `${person.firstName} ${person.lastName}`;
     }
-    else{
-    return `${person.fna} ${person.lna}`;}}
+}
 
-let person = {
-    fna: 'John',
-    lna: 'Doe',
-    mdn:'k'
+const individual: Person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    middleName: 'K',
+    age: 25,
 };
-console.log(getf(person));
+console.log(getFullName(individual));
 
-//assigning to variable using interface
-let y:person=`${person.fna}${person.lna}`;
+// Assigning to variable using interface
+const y: string = `${individual.firstName}${individual.lastName}`;
 console.log(y);
+
 
 output
 
@@ -171,16 +167,18 @@ example 5
 interface Person {
     readonly ssn: string;
     firstName: string;
-    lastName: string;    
+    lastName: string;
 }
 
-let person: Person;
-person = {
+const individual: Person = {
     ssn: '171-28-0926',
     firstName: 'John',
     lastName: 'Doe'
-}
-person.ssn = '171-28-0000';
+};
+
+// This line will result in a TypeScript error since 'ssn' is readonly
+// individual.ssn = '171-28-0000';
+
 
 OUTPUT
 Errors in code
@@ -191,33 +189,21 @@ FUNCTION TYPES
 
 example 6
 interface Person {
-    ( ssn: string,
-    firstName: string):string   
+    (ssn: string, firstName: string): string;
 }
 
-let person: Person;
-person =function(ssn:string,firstname:string){
-        return firstname ? ssn.toLocaleUpperCase() : ssn.toLocaleLowerCase();
+const person: Person = function (ssn: string, firstName: string): string {
+    return firstName ? ssn.toUpperCase() : ssn.toLowerCase();
+};
 
-}
+console.log(person('hi', 'sample'));
 
-console.log(person('hi', 'jhh'));
+const personLowerCase: Person = function (ssn: string): string {
+    return ssn.toLowerCase();
+};
 
-output
+console.log(personLowerCase('hi', 'sample'));
 
-[LOG]: "HI" 
-
-interface Person {
-    ( ssn: string,
-    firstName: string):string   
-}
-
-let person: Person;
-person =function(ssn:string){
-return ssn.toLowerCase();
-}
-
-console.log(person('hi', 'jhh'));
 output
 [LOG]: "hi" 
 __________________________________________________________________________________________________________________________________________________________________________________________
@@ -226,20 +212,20 @@ CLASS TYPE
 EXAMPLE 8
 
 interface Json {
-     tojson():string
+    toJson(): string;
 }
 
-class Person implements Json{
-    constructor(private fn:string)
-    {
+class Person implements Json {
+    constructor(private firstName: string) {}
 
+    toJson(): string {
+        return JSON.stringify(this);
     }
-         tojson():string{
-return JSON.stringify(this);}
-
 }
-let person = new Person('John');
-console.log(person.tojson());
+
+const individual = new Person('John');
+console.log(individual.toJson());
+
 
 output
 [LOG]: "{"fn":"John"}" 

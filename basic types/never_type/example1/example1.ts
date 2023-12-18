@@ -5,3 +5,6 @@ function raiseError(errorMessage: string): never {
 const reject = (): never => raiseError('Rejected');
 
 reject();
+
+ output
+[ERR]: Rejected

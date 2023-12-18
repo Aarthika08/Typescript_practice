@@ -51,3 +51,10 @@ console.log(person.firstName); // Output: aaa
 console.log(person.lastName); // Output: bbb
 
 console.log(person.getFullName()); // Output: aaa bbb
+
+
+output
+10
+aaa
+bbb
+aaa bbb

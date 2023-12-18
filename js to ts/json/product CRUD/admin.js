@@ -1,5 +1,5 @@
 function addProduct() {
-    // Get form values
+    // Get form values 
     var productName = document.getElementById("productName").value;
     var productPrice = document.getElementById("productPrice").value;
     var productUrl = document.getElementById("productUrl").value;

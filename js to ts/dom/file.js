@@ -1,4 +1,4 @@
-function color1() {
+ function color1() {
     var randomcolor = Math.floor(Math.random() * 1672215).toString(16);
     document.body.style.backgroundColor = "#" + randomcolor;
     var randomcolor1 = Math.floor(Math.random() * 1675).toString(16);

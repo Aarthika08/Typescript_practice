@@ -5,11 +5,12 @@ for(init;cond;inc)
 }
 
 example 1
+example1.ts
 
-const max = 10;
+const maximum = 10;
 let counter = 0;
 
-for (let i=0;i<max;i++) {
+for (let i=0;i<maximum;i++) {
     counter++;
     console.log(counter); // 1
 }
@@ -26,8 +27,9 @@ output
 [LOG]: 8 
 [LOG]: 9 
 [LOG]: 10 
-
+__________________________________________________________________________________________________________________________________________________________________________________
 example 2
+example2.ts
 
 let counter = 0;
 

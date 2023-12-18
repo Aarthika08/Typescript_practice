@@ -1,4 +1,4 @@
-//create ts file first and then compile it.we dont want to create js file.because it automatically creates it
+ //create ts file first and then compile it.we dont want to create js file.because it automatically creates it
 function color1(){
     const randomcolor=
     Math.floor(Math.random()*1672215).toString(16);

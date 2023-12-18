@@ -7,6 +7,7 @@ function increment(counter: number) {
 
 
 //return type is mentioned
+
 function increment(counter: number):number {
     return counter++;
 }
@@ -16,7 +17,9 @@ TypeScript will infer the type for the items as an array of numbers and strings:
 let items = [0, 1, null, 'Hi'];
 
 Contextual typing
-TypeScript uses the locations of variables to infer their types. This mechanism is known as contextual typing. For example:
+
+TypeScript uses the locations of variables to infer their types. This mechanism is known as contextual typing. 
+For example:
 
 document.addEventListener('click', function (event) {
     console.log(event.button); // 
@@ -26,7 +29,7 @@ even if click--it understands it is mouseevent but if 'click' is ---> to scroll 
 
 The following show the difference between type inference and type annotations:
 __________________________________________________________________________
-| Type inference	            |          Type annotations                  |
+| Type inference	            |          Type annotations                |
 | _________________________________________________________________________|
-|TypeScript guesses the type	|   You explicitly tell TypeScript the type  |
+|TypeScript guesses the type	|   You explicitly tell TypeScript the type|
 | _________________________________________________________________________|

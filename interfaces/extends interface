@@ -135,6 +135,16 @@ console.log(`waiting email : ${email}  `);
 let a = new mail('abc@gmail.com', 12);
  a.later('xyz@gmail.com', 500); 
 
+let b = new sends('abc@gmail.com', 12);
+ b.send('xyz@gmail.com', 500); 
+
+
+let c = new queues('abc@gmail.com', 12);
+ c.queue('xyzkk@gmail.com', 500); 
+
 output
 [LOG]: "Send email to xyz@gmail.com in 500 ms."
+[LOG]: "Sent email to xyz@gmail.com " 
+[LOG]: "waiting email : xyzkk@gmail.com  " 
+
 _____________________________________________________________________________________________________________________________________________________

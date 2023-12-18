@@ -1,5 +1,5 @@
 class Person {
-    private _age: number;
+    private _age: number; 
     private _firstName: string;
     private _lastName: string;
 

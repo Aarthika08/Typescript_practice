@@ -1,10 +1,10 @@
-# Funtion types
+  # Funtion types
 
 **syntax**
 >(parameter: type, parameter:type,...) => type
 
 **How to assign return type**
->let add(a:number,b:number) =>number;
+>let add(firstnumber:number,secondnumber:number) =>number;
 
 In this example:
 
@@ -14,7 +14,7 @@ The type of the return value is number that follows the fat arrow (=>) appeared 
 
 **How to assign**
 
->add=function(a:number,b:number){
+>add=function(firstnumber:number,secondnumber:number){
 >
 >return a+b
 >
@@ -24,7 +24,7 @@ The type of the return value is number that follows the fat arrow (=>) appeared 
 
 >let add:(a1:number,a2:number)=>number=
 >
->function(a:number,b:number){
+>function(firstnumber:number,secondnumber:number){
 >
 >return a+b
 >
@@ -56,7 +56,7 @@ Here it is change into
 
 >let add:(x: string, y: string)=>number
 >
->function(a:string,b;string) {
+>function(firstnumber:string,secondnumber;string) {
 >
 >   return x.concat(y).length;
 >

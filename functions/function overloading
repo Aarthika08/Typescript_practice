@@ -4,7 +4,7 @@ function add(a: string, b: string): string;
 function add(a: any, b: any): any {
    return a + b;
 }
-
+ 
 example 2
 
 Function overloading with optional parameters

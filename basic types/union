@@ -1,4 +1,5 @@
 write  typescript to add two values 
+mathoperaation.ts
 
 function add(firstnumber:any,secondnumber:any){
   if (typeof(firstnumber)==='number'&& typeof(secondnumber)==='number')
@@ -25,6 +26,7 @@ output
 console.log(add(true,false))--not allowed
 ____________________________________________________________________________________________________________________________________________________________________
 A union type describes a value that can be one of several types, not just two. For example number | string | boolean is the type of a value that can be a number, a string, or a boolean.
+mathoperaation1.ts
 
 
 function add(firstnumber:number|string,secondnumber:number|string){

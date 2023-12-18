@@ -1,4 +1,4 @@
-// admin.js
+   // admin.js
 interface Product {
     name: string;
     price: string;

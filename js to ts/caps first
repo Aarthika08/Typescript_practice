@@ -1,4 +1,4 @@
-function longestWord(str:string) 
+ function longestWord(str:string) 
     {
     const words:string = str.split(/\s+/);
 

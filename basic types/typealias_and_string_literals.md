@@ -21,13 +21,13 @@ output
 
 >type alphanumeric=number|string;
 >
->let msg=alphanumeric;
+>let message=alphanumeric;
 >
->msg=12;
+>message=12;
 >
->msg="abc";
+>message="abc";
 >
->msg=true ;//error
+>message=true ;//error
 
 
 > [!NOTE]

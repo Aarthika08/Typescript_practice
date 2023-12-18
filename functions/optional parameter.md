@@ -6,19 +6,19 @@
 example 1
 
 
->       function add(a:number,b:number,c?: number):number
+>       function add(firstnumber:number,secondnumber:number,thirdnumber?: number):number
 >
 >      {
 >
->      if (typeof c!=='undefined')
+>      if (typeof thirdnumber!=='undefined')
 >
 >     {
 >
->        return a*b*c;
+>        return firstnumber*secondnumber*thirdnumber;
 >
 >     }
 >
->            return a*b;
+>            return firstnumber*secondnumber;
 >
 >     }
 >
@@ -31,19 +31,19 @@ output
 
 example 2
 
->       function add(a:number,b?:number,c: number):number
+>       function add(firstnumber:number,secondnumber?:number,thirdnumber: number):number
 >
 >      {
 >
->      if (typeof c!=='undefined')
+>      if (typeof thirdnumber!=='undefined')
 >
 >     {
 >
->        return a*b*c;
+>        return firstnumber*secondnumber*thirdnumber;
 >
 >     }
 >
->            return a*c;
+>            return firstnumber*thirdnumber;
 >
 >     }
 >

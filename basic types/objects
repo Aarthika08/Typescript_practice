@@ -1,6 +1,5 @@
 
-let employee: object; 
-employee = {
+const employee: object = {
     firstName: 'John',
     lastName: 'Doe',
     age: 25,
@@ -8,6 +7,7 @@ employee = {
 };
 
 console.log(employee);
+
 
 output
 [LOG]: {
@@ -17,7 +17,7 @@ output
   "jobTitle": "Web Developer"
 } 
 *****************************************************************************
-let employee: {
+const employee: {
     firstName: string;
     lastName: string;
     age: number;

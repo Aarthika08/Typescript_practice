@@ -3,7 +3,7 @@
 //         Convert userId string to number
 //         Short Syntax to get data from localStorage
 //         Remove an item from LocalStorage
-//         Remove all items from LocalStorage
+//         Remove all items from LocalStorage 
 
 localStorage.setItem("name","abc");
 localStorage.setItem("userid","12");

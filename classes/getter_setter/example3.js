@@ -1,7 +1,7 @@
 var Person = /** @class */ (function () {
     function Person() {
     }
-    Object.defineProperty(Person.prototype, "age", {
+    Object.defineProperty(Person.prototype, "age", { 
         get: function () {
             return this._age;
         },

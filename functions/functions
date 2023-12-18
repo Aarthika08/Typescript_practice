@@ -8,8 +8,8 @@ statement 1
 
 example 1
 ---------
-function add(a:number,b:number){
-return a+b;
+function add(firstnumber:number,secondnumber:number){
+return firstnumber+secondnumber;
 }
 
  console.log(add(2,3)) //5
@@ -21,8 +21,8 @@ ________________________________________________________________________________
 
 example 2
 --------
-function echo(a:string,b:string):void{
-    console.log(a+b) //5
+function echo(firstnumber:string,secondnumber:string):void{
+    console.log(firstnumber+secondnumber) //5
 
 }
 
@@ -37,8 +37,8 @@ function echo(a:string,b:string):void{
 __________________________________________________________________________________________________________________________________________________________________________________
 example 3
 ---------
-function add(a:number,b:number):number{
-    return a+b; 
+function add(firstnumber:number,b:number):number{
+    return firstnumber+secondnumber; 
 }
 
 // console.log(add(2,3)) //5

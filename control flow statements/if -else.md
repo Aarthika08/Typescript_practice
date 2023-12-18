@@ -15,11 +15,11 @@
 >}
 >
 **example**
->const max = 100;
+>const maximum_value = 100;
 >
 >let counter = 100;
 >
->if (counter < max) {
+>if (counter < maximum_value) {
 >
 >  counter++;
 >

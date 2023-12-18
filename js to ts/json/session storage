@@ -1,4 +1,4 @@
-  // Store a name, userId in LocalStorage
+   // Store a name, userId in LocalStorage
 //         Retrieve the data from localStorage
 //         Convert userId string to number
 //         Short Syntax to get data from localStorage

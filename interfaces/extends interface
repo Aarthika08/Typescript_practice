@@ -1,0 +1,140 @@
+syntax 1
+interface A {
+    a(): void
+}
+
+interface B extends A {
+    b(): void
+}
+_____________________________________________________________________________________________________________________________________________________
+Example1
+
+interface primary{
+send(email:string) :boolean;
+queue(email:string) :boolean;
+}
+
+interface secondary extends primary
+{
+later(email:string,after:number):boolean;
+}
+
+class mail implements secondary
+{ 
+later(email:string,after:number):boolean{
+console.log(`Send email to ${email} in ${after} ms.`);
+        return true;
+}
+send(email:string) :boolean{
+console.log(`Sent email to ${email} `);
+        return true;
+}
+queue(email:string) :boolean{
+console.log(`waiting email : ${email}  `);
+        return true;
+}
+}
+
+
+let a = new mail('abc@gmail.com', 12);
+ a.later('xyz@gmail.com', 500); 
+
+output
+[LOG]: "Send email to xyz@gmail.com in 500 ms." 
+_____________________________________________________________________________________________________________________________________________________
+
+write a ts program to print the email while intiation and print the different email while function call using object.
+
+interface primary{
+send(email:string) :boolean;
+queue(email:string) :boolean
+
+}
+
+interface secondary extends primary
+{
+later(email:string,after:number):boolean
+}
+
+class mail implements secondary
+{
+     constructor(private email: string,after:number){
+                  this.later(email, after); // Call later method in the constructor
+
+     }    
+later(email:string,after:number):boolean{
+console.log(`Send email to ${email} in ${after} ms.`);
+        return true;
+}
+send(email:string) :boolean{
+console.log(`Sent email to ${email} `);
+        return true;
+}
+queue(email:string) :boolean{
+console.log(`waiting email : ${email}  `);
+        return true;
+}
+}
+
+
+let a = new mail('abc@gmail.com', 12);
+ a.send('xyz@gmail.com', 500); 
+
+
+output
+[LOG]: "Send email to abc@gmail.com in 12 ms." 
+[LOG]: "Sent email to xyz@gmail.com " 
+
+_____________________________________________________________________________________________________________________________________________________
+syntax 2
+interface C {
+    c(): void
+}
+
+interface D extends B, C {
+    d(): void
+}
+
+_____________________________________________________________________________________________________________________________________________________
+example 3
+// interface primary{
+// send(email:string) :boolean;
+// queue(email:string) :boolean
+
+// }
+
+
+
+class mail 
+{
+later(email:string,after:number):boolean{
+console.log(`Send email to ${email} in ${after} ms.`);
+        return true;
+}
+
+interface secondary extends mail
+{
+later(email:string,after:number):boolean
+}
+        
+class sends extends mail implements secondary
+{
+send(email:string) :boolean{
+console.log(`Sent email to ${email} `);
+        return true;
+}}
+class queues extends mail implements secondary
+{
+queue(email:string) :boolean{
+console.log(`waiting email : ${email}  `);
+        return true;
+}}
+
+
+
+let a = new mail('abc@gmail.com', 12);
+ a.later('xyz@gmail.com', 500); 
+
+output
+[LOG]: "Send email to xyz@gmail.com in 500 ms."
+_____________________________________________________________________________________________________________________________________________________

@@ -1,3 +1,4 @@
+program.ts
 class person
 {
 id;
@@ -38,6 +39,7 @@ class Person {
         return `${this.firstName} ${this.lastName}`;
     }
 }
+_____________________________________________________________________________________________________________________________________________________________________
 
 
 ACCESS MODIFIERS
@@ -46,6 +48,8 @@ TypeScript provides three access modifiers to class properties and methods: priv
 The private modifier allows access within the same class.
 The protected modifier allows access within the same class and subclasses.
 The public modifier allows access from any location.
+
+example1.ts
 
 class Person {
     constructor(protected ssn: string, private firstName: string, private lastName: string) {
@@ -61,6 +65,8 @@ class Person {
 
 
 READ_ONLY
+
+readonly.ts
 
 class Person {
     readonly birthDate: Date;
@@ -78,7 +84,8 @@ Property 'birthDate' has no initializer and is not definitely assigned in the co
 Cannot assign to 'birthDate' because it is a read-only property.
 
 
-example 2
+ example 2
+readonly_example2.ts
 
 class Person
 {
@@ -101,6 +108,7 @@ output
 } 
 
 example 3
+readonly_example3.ts
 
 const numbers: readonly number[] = [1, 2, 3];
 

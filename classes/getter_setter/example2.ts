@@ -1,43 +1,43 @@
 class Person {
-    private _age: number; 
-    private _firstName: string;
-    private _lastName: string;
+    private ageValue: number; 
+    private firstNameValue: string;
+    private lastNameValue: string;
 
     public get age(): number {
-        return this._age;
+        return this.ageValue;
     }
 
     public set age(newAge: number) {
         if (newAge <= 0 || newAge > 100) {
             throw new Error("Invalid age");
         }
-        this._age = newAge;
+        this.ageValue = newAge;
     }
 
     public get firstName(): string {
-        return this._firstName;
+        return this.firstNameValue;
     }
 
     public set firstName(newFirstName: string) {
         if (!newFirstName) {
             throw new Error("Invalid first name");
         }
-        this._firstName = newFirstName;
+        this.firstNameValue = newFirstName;
     }
 
     public get lastName(): string {
-        return this._lastName;
+        return this.lastNameValue;
     }
 
     public set lastName(newLastName: string) {
         if (!newLastName) {
             throw new Error("Invalid last name");
         }
-        this._lastName = newLastName;
+        this.lastNameValue = newLastName;
     }
 
     public getFullName(): string {
-        return `${this._firstName} ${this._lastName}`;
+        return `${this.firstNameValue} ${this.lastNameValue}`;
     }
 }
 
@@ -51,6 +51,7 @@ console.log(person.firstName); // Output: aaa
 console.log(person.lastName); // Output: bbb
 
 console.log(person.getFullName()); // Output: aaa bbb
+
 
 
 output

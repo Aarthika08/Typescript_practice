@@ -3,44 +3,48 @@ var Person = /** @class */ (function () {
     }
     Object.defineProperty(Person.prototype, "age", {
         get: function () {
-            return this._age;
+            return this.ageValue;
         },
         set: function (newAge) {
-            if (newAge <= 0 || newAge > 100) {
-                throw new Error("Invalid age");
-            }
-            this._age = newAge;
+            this.validateAge(newAge);
+            this.ageValue = newAge;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(Person.prototype, "fullName", {
         get: function () {
-            return "".concat(this._firstName, " ").concat(this._lastName);
+            return "".concat(this.firstNameValue, " ").concat(this.lastNameValue);
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(Person.prototype, "firstName", {
         set: function (newFirstName) {
-            if (!newFirstName) {
-                throw new Error("Invalid first name");
-            }
-            this._firstName = newFirstName;
+            this.validateName(newFirstName, "first");
+            this.firstNameValue = newFirstName;
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(Person.prototype, "lastName", {
         set: function (newLastName) {
-            if (!newLastName) {
-                throw new Error("Invalid last name");
-            }
-            this._lastName = newLastName;
+            this.validateName(newLastName, "last");
+            this.lastNameValue = newLastName;
         },
         enumerable: false,
         configurable: true
     });
+    Person.prototype.validateAge = function (newAge) {
+        if (newAge <= 0 || newAge > 100) {
+            throw new Error("Invalid age. Age must be between 1 and 100.");
+        }
+    };
+    Person.prototype.validateName = function (name, type) {
+        if (!name) {
+            throw new Error("Invalid ".concat(type, " name. ").concat(type, " name cannot be empty."));
+        }
+    };
     return Person;
 }());
 var person = new Person();

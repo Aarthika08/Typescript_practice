@@ -1,4 +1,4 @@
-import * as readlineSync from 'readline-sync';//to get user input
+ import * as readlineSync from 'readline-sync';//to get user input
 interface customer{
     discount:number;
     already_customer:boolean;

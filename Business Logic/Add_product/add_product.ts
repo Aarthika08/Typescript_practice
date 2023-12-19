@@ -8,7 +8,7 @@ interface Product extends customer{
     name: string;
     price: number;
     model: string;
-    version: number;
+    version: number; 
     customer_calculation(already_customer: boolean):number
     calculateDiscount(): number;
   }

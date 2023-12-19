@@ -1,35 +1,41 @@
 class Person {
-    private _age: number;
-    private _firstName: string;
-    private _lastName: string;
+    private ageValue: number;
+    private firstNameValue: string;
+    private lastNameValue: string;
 
     public get age(): number {
-        return this._age;
+        return this.ageValue;
     }
 
     public set age(newAge: number) {
-        if (newAge <= 0 || newAge > 100) {
-            throw new Error("Invalid age");
-        }
-        this._age = newAge;
+        this.validateAge(newAge);
+        this.ageValue = newAge;
     }
 
     public get fullName(): string {
-        return `${this._firstName} ${this._lastName}`;
+        return `${this.firstNameValue} ${this.lastNameValue}`;
     }
 
     public set firstName(newFirstName: string) {
-        if (!newFirstName) {
-            throw new Error("Invalid first name");
-        }
-        this._firstName = newFirstName;
+        this.validateName(newFirstName, "first");
+        this.firstNameValue = newFirstName;
     }
 
     public set lastName(newLastName: string) {
-        if (!newLastName) {
-            throw new Error("Invalid last name");
+        this.validateName(newLastName, "last");
+        this.lastNameValue = newLastName;
+    }
+
+    private validateAge(newAge: number): void {
+        if (newAge <= 0 || newAge > 100) {
+            throw new Error("Invalid age. Age must be between 1 and 100.");
         }
-        this._lastName = newLastName;
+    }
+
+    private validateName(name: string, type: string): void {
+        if (!name) {
+            throw new Error(`Invalid ${type} name. ${type} name cannot be empty.`);
+        }
     }
 }
 

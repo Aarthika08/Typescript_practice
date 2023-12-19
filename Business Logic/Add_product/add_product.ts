@@ -27,14 +27,8 @@ class ProductManager implements Product {
     ) {}
 
     customer_calculation(already_customer:boolean):number{
-        if (this.already_customer)
-        {
-            this.price=this.price-1000;
-        }
-        else{
-            this.price=this.price-500;
-        }
-        return this.price;
+        const discountAmount = alreadyCustomer ? 1000 : 500;
+        return this.price - discountAmount;
     }
     calculateDiscount():number {
         let discountPercent = 0.5;

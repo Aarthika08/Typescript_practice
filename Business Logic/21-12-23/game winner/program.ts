@@ -1,4 +1,4 @@
-
+ 
 // Input a string which contains some palindrome substrings. 
 // Find out the position of palindrome substrings if exist and replace it by *. 
 // (For example if input string is “bob has a radar plane” then it should convert in “*** has a ***** plane”.

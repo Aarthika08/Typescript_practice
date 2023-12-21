@@ -3,13 +3,10 @@
 // Find out the position of palindrome substrings if exist and replace it by *. 
 // (For example if input string is “bob has a radar plane” then it should convert in “*** has a ***** plane”.
 import * as readlineSync from 'readline-sync';//to get user input
-
 let a=readlineSync.question("Enter your gross salary: ")
 // let a="bob has a radar"
 let words=a.split(" ");
 let  replacedPalindromesCount =0;
-
-
 // for (const value of g)
 for(let i=0 ;i<words.length;i++)
 {
@@ -21,8 +18,6 @@ for(let i=0 ;i<words.length;i++)
         //  let r=a.replace(value,'*'.repeat(value.length));
         words[i]='*'.repeat(value.length);
         replacedPalindromesCount++;
-
-
      }
 
 }

@@ -22,6 +22,11 @@ create sample.ts in src and run tsc.
 automatically js file will be created in dist 
 Video 
 [https://drive.google.com/drive/u/1/folders/1nikPatVjC_CjxALD5GOaR49xL0gWJPav](url)
+
+
+this is  zip file
+
+
 [to execute typescript_.zip](https://github.com/Aarthika08/Typescript_practice/files/15047561/to.execute.typescript_.zip)
 
 
